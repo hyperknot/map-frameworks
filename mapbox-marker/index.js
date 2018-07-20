@@ -88,7 +88,9 @@ map.on('load', function() {
   }
 
   document.getElementById('button-10000').onclick = () => {
-    fillMapWithData(40, 25)
+    if (window.confirm('This will probably slow down your browser a LOT, are you sure?')) {
+      fillMapWithData(40, 25)
+    }
   }
 })
 
